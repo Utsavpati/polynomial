@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %} 
+{% load static %}
+{% block body %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group green-border-focus mt-2">
+        <label for="exampleFormControlTextarea5">Type or Paste your code snippet here:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea5" rows="3" name="snippet"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" style="display: inline-block;margin-left: 47%;margin-top: 2%;">Submit</button>
+</form>
+<div>{{res}}</div>
+{% endblock body %}
