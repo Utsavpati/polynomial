@@ -1,5 +1,21 @@
 {% extends 'app/base.html' %} 
 {% load static %}
 {% block body %}
-<div class="text-center">{{show}}</div>
+<div class="text-center">{{paste.snippet}}</div>
+<div >
+    <table>
+        <tr>
+            <td>IP address</td>
+            <td>Last accessed</td>
+        </tr>
+        {% for ip in ip_list%}
+        
+            <tr>
+                <td>{{ip.ip_address}}</td>
+                <td>{{ip.accessed}}</td>
+            </tr>
+        
+        {% endfor %}
+    </table>
+</div>
 {% endblock body %}

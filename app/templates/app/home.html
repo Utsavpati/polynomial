@@ -7,7 +7,21 @@
         <label for="exampleFormControlTextarea5">Type or Paste your code snippet here:</label>
         <textarea class="form-control" id="exampleFormControlTextarea5" rows="3" name="snippet"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary" style="display: inline-block;margin-left: 47%;margin-top: 2%;">Submit</button>
+    <button type="submit" name = "submit" class="btn btn-primary" style="display: inline-block;margin-left: 47%;margin-top: 2%;">Submit</button>
 </form>
 <div>{{res}}</div>
+<table>
+    {% for p in paste %}
+<tr>
+    <td>{{p.snippet}}</td>
+    <td>{{p.unique_link}}</td>
+    <form action="{% url 'delete' p.id %}" method="post">{% csrf_token %}<td><button type="submit">DELETE</button></td></form>
+    <form action="{% url 'renew' p.id %}" method="post">{% csrf_token %}<td><td><button type="submit">RENEW</button></td></form>
+</tr>
+
+    
+{% endfor %}
+
+</table>
+
 {% endblock body %}
