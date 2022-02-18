@@ -30,5 +30,8 @@ python manage.py runserver
 
 https://polynomial-pasteit.herokuapp.com/
 
-
+## Images
+![Alt text](./1.png?raw=true "Title")
+![Alt text](./2.png?raw=true "Title")
+![Alt text](./3.png?raw=true "Title")
 
