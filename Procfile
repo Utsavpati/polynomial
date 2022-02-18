@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT pasteit.wsgi:application
+web: gunicorn pasteit.wsgi --log-file -
